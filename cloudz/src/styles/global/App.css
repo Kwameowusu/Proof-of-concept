@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    /* global variables */
+
+    /* --clz-night-background-gredient: linear-gradient(180deg, #676767 0%, #17181B 58.85%);
+    --clz-day-background-gredient: linear-gradient(180deg, #5C9DFF 0%, #0C3776 58.85%); */
+
+    /* --clz-day-fade-background-left: linear-gradient(270.21deg, rgba(24, 76, 123, 0) 3.29%, #1A3D72 62.89%);
+    --clz-day-fade-background-right: linear-gradient(86.21deg, rgba(24, 76, 123, 0) 3.29%, #1A3D72 62.89%);
+
+    --clz-night-fade-background-left: linear-gradient(270.21deg, rgba(24, 77, 123, 0) 3.29%, #181819 62.89%);
+    --clz-night-fade-background-right: linear-gradient(86.21deg, rgba(24, 76, 123, 0) 3.29%, #181819 62.89%); */
+
+    /* --ripple-background-color: rgb(175, 175, 255); */
+
+    --clz-text-color: white;
+    --clz-text-color2: #ececec;
+
+    --clz-fontsize1: 10px;
+    --clz-fontsize2: 12px;
+    --clz-fontsize3: 14px;
+    --clz-fontsize4: 16px;
+    --clz-fontsize5: 18px;
+    --clz-fontsize6: 20px;
+    --clz-fontsize7: 22px;
+    --clz-fontsize8: 24px;
+    --clz-fontsize9: 26px;
+    --clz-fontsize10: 28px;
+    --clz-fontsize11: 30px;
+}
+
+:root[theme='light'] {
+    --clz-background-gredient: linear-gradient(180deg, #5C9DFF 0%, #0C3776 58.85%);
+
+    --clz-fade-background-left: linear-gradient(270.21deg, rgba(24, 76, 123, 0) 3.29%, #113873 62.89%);
+    --clz-fade-background-right: linear-gradient(86.21deg, rgba(24, 76, 123, 0) 3.29%, #113873 62.89%);
+
+
+
+    --ripple-background-color: rgb(175, 175, 255);
+}
+
+
+:root[theme='dark'] {
+    --clz-background-gredient: linear-gradient(180deg, #676767 0%, #17181B 58.85%);
+    --ripple-background-color: rgb(130, 130, 130);
+
+
+    --clz-fade-background-left: linear-gradient(270.21deg, rgba(24, 77, 123, 0) 3.29%, #181819 62.89%);
+    --clz-fade-background-right: linear-gradient(86.21deg, rgba(24, 76, 123, 0) 3.29%, #181819 62.89%);
+}
+
+* {
+    /* outline: 1px solid red; */
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    overflow: hidden;
+    margin: 0;
+    background: var(--clz-background-gredient);
+}
+
+
+[effect=ripple] {
+    /* cursor: pointer; */
+    overflow: hidden;
+    position: relative;
+
+}
+
+[effect=ripple]::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform-origin: center;
+    top: calc(var(--top) * 1px);
+    left: calc(var(--left) * 1px);
+    width: calc(var(--diameter) * 1px);
+    height: calc(var(--diameter) * 1px);
+    background: var(--ripple-background, rgba(5, 5, 5, 0));
+    transform: translate(-50%, -50%) scale(var(--scale, 1));
+    opacity: calc(var(--opacity, 1) * var(--ripple-opacity, 0.5));
+    transition: calc(var(--time, 0) * var(--ripple-duration, 300ms)) var(--ripple-easing, linear);
+}

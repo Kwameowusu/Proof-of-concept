@@ -1,0 +1,77 @@
+.cloudz-daysforecast-today-daily-cards-header-container {
+
+    display: flex;
+    /* gap: 20px; */
+    flex-direction: column;
+}
+
+.cloudz-daysforecast-header-container {}
+
+.cloudz-daysforecast-today-daily-cards-fade-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.cloudz-daysforecast-today-daily-cards-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+
+}
+
+.cloudz-daysforecast-today-daily-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.cloudz-daysforecast-fade-left {
+    position: absolute;
+    height: 100%;
+    background: var(--clz-fade-background-left);
+    width: 80px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloudz-daysforecast-fade-right {
+    position: absolute;
+    height: 100%;
+    background: var(--clz-fade-background-right);
+    z-index: 2;
+    width: 80px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloudz-daysforecast-today-daily-cards-stretch {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+@media screen and (max-width:750px) {
+   
+
+    .cloudz-daysforecast-today-daily-cards-stretch {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cloudz-daysforecast-fade-left {
+
+        width: 50px;
+
+    }
+
+    .cloudz-daysforecast-fade-right {
+
+        width: 50px;
+
+    }
+}

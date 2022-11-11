@@ -1,0 +1,29 @@
+.cloudz-iconbutton-container {
+    display: flex;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--clui-text-dark-light-bgcolor);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow: hidden;
+    mask-image: -webkit-radial-gradient(white, black);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    padding: 0;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .cloudz-iconbutton-container {
+        display: flex;
+    }
+}

@@ -1,0 +1,229 @@
+.cloudz-largeweathercard-container {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.cloudz-largeweathercard-background-image {
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cloudz-largeweathercard-background-image img {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cloudz-largeweathercard-content-container {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: hsla(205, 16%, 15%, 0.518);
+}
+
+
+.cloudz-largeweathercard-current-weather-container {
+    /* height: 65%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cloudz-largeweathercard-current-weather-head {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cloudz-largeweathercard-current-weather-head .current-weather {
+    font-weight: 700;
+    font-size: var(--clz-fontsize5);
+}
+
+.cloudz-largeweathercard-icon-temp-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cloudz-largeweathercard-icon-temp {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.cloudz-largeweathercard-icon-temp-text .icon-container {
+    overflow: hidden;
+    font-size: calc(var(--clz-fontsize10) * 2.5);
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.cloudz-largeweathercard-icon-temp-text .large-temp-container {
+
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.cloudz-largeweathercard-icon-temp-text .large-temp-container .temperature {
+
+    font-size: calc(var(--clz-fontsize10) * 3);
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.cloudz-largeweathercard-icon-temp-text .large-temp-container .degree-celcious {
+    position: absolute;
+    font-size: calc(var(--clz-fontsize10) * 1.6);
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    right: -45px;
+    top: 10px;
+}
+
+
+.cloudz-largeweathercard-current-weather-head .time {
+    font-weight: 400;
+}
+
+.cloudz-largeweathercard-icon-temp-text .weather-condition {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cloudz-largeweathercard-icon-temp-text .weather-condition .mostly-text {
+    font-weight: 600;
+    font-size: var(--clz-fontsize4);
+}
+
+.cloudz-largeweathercard-icon-temp-text .weather-condition .feels-like {
+    font-weight: 300;
+    font-size: var(--clz-fontsize2);
+    display: flex;
+
+
+}
+
+.cloudz-largeweathercard-weather-conditions-container {
+    width: 100%;
+    margin-top: 40px;
+    border-top: 1px solid rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(197, 10%, 14%, 0.211);
+    height: 30vh;
+}
+
+
+.cloudz-largeweathercard-weather-conditions-container .weather-prediction-text {
+    font-weight: 450;
+    font-size: var(--clz-fontsize4);
+    padding-left: 20px;
+
+}
+
+.cloudz-largeweathercard-weather-conditions-container .weather-prediction-text p {
+    margin: 0;
+    margin-top: 5px;
+
+}
+
+.cloudz-largeweathercard-weather-conditions-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 0px 20px 0 20px;
+}
+
+.cloudz-largeweathercard-weather-conditions-metrics {
+    display: flex;
+    flex-direction: column;
+}
+
+.cloudz-largeweathercard-weather-conditions-metrics .condition {
+    font-size: var(--clz-fontsize3);
+    font-weight: 400;
+    margin-top: 9px;
+    color: var(--clz-text-color1);
+    white-space: nowrap;
+}
+
+.cloudz-largeweathercard-weather-conditions-metrics .metric-value {
+    font-size: var(--clz-fontsize4);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media screen and (max-width:950px) {
+    .cloudz-largeweathercard-container {
+        height: 330px;
+       
+    }
+}
+@media screen and (max-width:750px) {
+    .cloudz-largeweathercard-container {
+        height: 495px;
+        width: 95%;
+            margin: 0 auto;
+        /* border-radius: 0; */
+    }
+
+    .cloudz-largeweathercard-icon-temp-text {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 35px;
+        flex-direction: column;
+    }
+
+    .cloudz-largeweathercard-icon-temp {
+        display: flex;
+        gap: 20px;
+        width: 90%;
+        height: 100%;
+    }
+
+    .cloudz-largeweathercard-icon-temp-text .weather-condition {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .cloudz-largeweathercard-background-image img {
+        object-fit: cover;
+
+    }
+
+    .cloudz-largeweathercard-weather-conditions-container .weather-prediction-text p {
+        margin-top: 15px;
+    }
+
+    .cloudz-largeweathercard-weather-conditions-list {
+        display: flex;
+        /* gap: 20px; */
+        align-items: center;
+        padding: 10px 20px 0 20px;
+        overflow-x: auto;
+    }
+
+    .cloudz-largeweathercard-weather-conditions-list::-webkit-scrollbar {
+        display: none;
+    }
+}

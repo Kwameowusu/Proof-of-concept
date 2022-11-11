@@ -1,0 +1,30 @@
+.cloudz-navigationsbar-container {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cloudz-navigationsbar-logo-container {
+    height: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    /* font-size: var(--clz-fontsize10); */
+}
+
+@media screen and (max-width:750px) {
+    .cloudz-navigationsbar-container{
+        justify-content: center;
+    }
+    .cloudz-navigationsbar-logo-container {
+   margin-left: 0px;
+    padding-left: 2px;
+        padding-right: 2px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html theme="light" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" />
+
+		<title>Cloudz</title>
+
+		<script>
+			const currentTheme = localStorage.getItem("theme");
+
+			let meta = [...document.querySelectorAll("meta")].find(
+				(e) => e.name === "theme-color"
+			);
+
+			if (currentTheme !== null) {
+				document.documentElement.setAttribute("theme", currentTheme);
+			}
+
+			if (document.documentElement.getAttribute("theme") === "light") {
+				meta.content = "#5C9DFF";
+
+			
+			}
+
+			if (document.documentElement.getAttribute("theme") === "dark") {
+				meta.content = "#676767";
+
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
+</html>
