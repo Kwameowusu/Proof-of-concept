@@ -1,19 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./../../styles/components/cards/largeweathercard.css";
-import daysky from "./../../assets/image/daysky.png";
-import nightsky from "./../../assets/image/nightsky.png";
 
-import rainyday from "./../../assets/image/rainyday.png";
-import rainynight from "./../../assets/image/rainynight.png";
-
-import cloudyday from "./../../assets/image/cloudyday.png";
-import cloudynight from "./../../assets/image/cloudynight.png";
-
-import { useThemeProvider } from "../../contextapis/ThemeProvider";
 
 import useCheckWeatherIcon from "../../libs/usehooks/useCheckWeatherIcon";
 import useCheckWeatherImage from "../../libs/usehooks/useCheckWhetherImage";
-// import { ThemeContextType } from "../@types/theme";
+
 
 interface ConditionValues {
 	wind: string;

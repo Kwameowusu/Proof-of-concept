@@ -6,10 +6,8 @@ export const useView = <T extends HTMLElement, U extends IntersectionObserverIni
 ) => {
 	const [inView, setinView] = useState(false);
 
-	const getEntry = useRef<object | null>(null);
-	const CallbackFunc = (entries: any) => {
-		const [entry] = entries;
-		// console.log(entry);
+	const getEntry = useRef<IntersectionObserverEntry>();
+	const CallbackFunc = ([entry]: IntersectionObserverEntry[]) => {
 		getEntry.current = entry;
 		if (entry.isIntersecting === true) setinView(true);
 		else if (entry.isIntersecting === false) setinView(false);

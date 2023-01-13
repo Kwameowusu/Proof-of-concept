@@ -27,6 +27,7 @@ const useCheckWeatherIcon = () => {
 			"broken clouds": dashtheme === "light" ? <DayClouds /> : <NightClouds />,
 			"light intensity drizzle": dashtheme === "light" ? <Sunny /> : <NightClouds />,
 			"thunderstorm with rain": dashtheme === "light" ? <StormRain /> : <StormRain />,
+			"haze": dashtheme === "light" ? <DayClouds /> : <NightClouds />,
 		}[theWeather]);
 	return { checkWeatherIcon };
 };
